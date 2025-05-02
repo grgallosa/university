@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maindang National Highschool</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css-reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section class="hero">
+        <header>
+            <img src="assets/images/MNHS-LOGO.png" alt="MNHS-LOGO">
+            <nav class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()" aria-hidden="true"></i>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Admission</a></li>
+                    <li><a href="#">Academics</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <i class="fa fa-bars" onclick="showMenu()" aria-hidden="true"></i>
+        </header>
+        <div class="text-box">
+            <h1>World's Biggest University</h1>
+            <p>Making Website is now of one the easiest thing in the world. You just need to learn <br> HTML, CSS, JAVASCRIPT and you good to go.</p>
+            <a class="hero-btn" href="#">Visit Us to know More</a>
+        </div>
+    </section>
+
+    <section class="course">
+        <h1>Courses We Offer</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+        <div class="row">
+            <div class="course-col">
+                <h3>Intermediate</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione sit perspiciatis necessitatibus ut, nulla blanditiis in dignissimos eius saepe sequi?</p>
+            </div>
+
+            <div class="course-col">
+                <h3>Degree</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione sit perspiciatis necessitatibus ut, nulla blanditiis in dignissimos eius saepe sequi?</p>
+            </div>
+
+            <div class="course-col">
+                <h3>Graduation</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione sit perspiciatis necessitatibus ut, nulla blanditiis in dignissimos eius saepe sequi?</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toggle Menu Function -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0"
+        }
+
+        function hideMenu(){
+            navLinks.style.right = "-50%"
+        }
+    </script>
+</body>
+</html>
