@@ -115,57 +115,33 @@ header .fa {
 }
 
 
-/* course section */
+/* Making Difference */
 
-.course {
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
+.making-difference {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 20px;
+    max-width: 90%;
+    margin-inline: auto;
+    margin-top: 3rem;
+    align-items: center;    
 }
 
-.course h1 {
+.making-difference__img {
+    min-width: 300px;
+    max-width: 100%;
+    height: auto;
+}
+
+.content h2 {
+    margin-bottom: 1.5rem;
+    font-size: clamp(2rem, 3.4vw, 3.5rem);
     color: var(--dark-blue);
 }
 
-h1 {
-    font-size: 36px;
-    font-weight: 600;
-}
-
-h3 {
-    text-align: center;
-    color: var(--white);
-    font-weight: 600;
-    margin: 10px 0;
-}
-
-p {
-    color: var(--white);
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 22px;
-    padding: 10px;
-}
-
-.row {
-    margin-top: 5%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.course-col {
-    flex-basis: 31%;
-    background: var(--dark-blue);
-    border-radius: 10px;
-    margin-bottom: 5%;
-    padding: 20px 12px;
-    box-sizing: border-box;
-    transition: 1s;
-}
-
-.course-col:hover {
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+.content p {
+    color: var(--dark-blue);
 }
 
 @media(max-width:700px){
@@ -207,5 +183,14 @@ p {
 
     .row {
         flex-direction: column;
+    }
+
+    .making-difference {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        margin-inline: auto;
+        margin-top: 3rem;
+        align-items: center;    
     }
 }
