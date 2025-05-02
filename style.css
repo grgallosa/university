@@ -121,17 +121,17 @@ header .fa {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 1fr);
-    gap: 20px;
+    gap: 40px;
     max-width: 90%;
     margin-inline: auto;
     margin-top: 3rem;
     align-items: center;    
 }
 
-.making-difference__img {
-    min-width: 300px;
+.making-difference img{
     max-width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
 }
 
 .content h2 {
@@ -150,7 +150,7 @@ header .fa {
     }
 
     .text-box h1 {
-        font-size: 24px;
+        font-size: 1.643rem;
     }
 
     .nav-links ul li{
