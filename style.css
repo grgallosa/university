@@ -197,41 +197,15 @@ p {
     color: var(--dark-blue);
 }
 
+/* footer */
+
 footer {
     background-color: var(--dark-blue);
-    padding: 5rem;
-    align-items: center;
-    
+    padding: 2rem;
 }
-
-.marginbot {
-    margin-bottom: 2rem;
-}
-.left {
-    max-width: 50%;
-}
-
-.left .LOGO img{
-    width: 80px;
-    margin-right: 1rem;
-}
-
-.LOGO {
-    display: flex;
-    align-items: center;
-    margin-bottom: 2rem;
-}
-
-.right {
-    align-items: center;
-}
-.white {
+footer p {
     color: var(--white);
-}
-
-.tae {
-    display: flex;
-    justify-content: space-between;
+    text-align: center;
 }
 
 @media(max-width:700px){
