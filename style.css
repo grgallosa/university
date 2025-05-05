@@ -192,9 +192,46 @@ p {
 }
 
 .conference__grid-row h3{
-    font-size: clamp(1.5rem, 2.5vw, 3rem);
+    font-size: clamp(1.5rem, 2.3vw, 3rem);
     margin: 4rem 0 1rem;
     color: var(--dark-blue);
+}
+
+footer {
+    background-color: var(--dark-blue);
+    padding: 5rem;
+    align-items: center;
+    
+}
+
+.marginbot {
+    margin-bottom: 2rem;
+}
+.left {
+    max-width: 50%;
+}
+
+.left .LOGO img{
+    width: 80px;
+    margin-right: 1rem;
+}
+
+.LOGO {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.right {
+    align-items: center;
+}
+.white {
+    color: var(--white);
+}
+
+.tae {
+    display: flex;
+    justify-content: space-between;
 }
 
 @media(max-width:700px){
@@ -255,6 +292,15 @@ p {
 
     .conference__header p {
         text-align: center;
+        max-width: 100%;
+    }
+
+    .tae {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left {
         max-width: 100%;
     }
 }
