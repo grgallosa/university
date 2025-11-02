@@ -40,15 +40,16 @@
 <!-- Coming Soon -->
 
     <!-- Toggle Menu Function -->
-    <script>
-        var navLinks = document.getElementById("navLinks");
-        function showMenu(){
-            navLinks.style.right = "0"
-        }
+     <script>
+  var navLinks = document.getElementById("navLinks");
 
-        function hideMenu(){
-            navLinks.style.right = "-50%"
-        }
-    </script>
+  function showMenu(){
+    navLinks.classList.add("nav-open");
+  }
+
+  function hideMenu(){
+    navLinks.classList.remove("nav-open");
+  }
+     </script>
 </body>
 </html>
