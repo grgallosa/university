@@ -1,159 +1,183 @@
 :root {
-    --dark-blue:#00296b;
-    --blue: #003f88;
-    --light-blue: #00509d;
-    --white: #ffffff;
-    --font: "Poppins", sans-serif;
-}
-*{
-    margin: 0;
-    padding: 0;
-    font-family: var(--font);
-}
-body{
-    margin: 0;
-    padding: 0;
+  --dark-blue: #00296b;
+  --blue: #003f88;
+  --light-blue: #00509d;
+  --white: #ffffff;
+  --font: "Poppins", sans-serif;
 }
 
-/* hero section */
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* ============================= */
+/* HERO SECTION + HEADER */
+/* ============================= */
 
 .hero {
-    min-height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(assets/images/2023-graduates.jpg);
-    background-position: center;
-    background-size: cover;
-    position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(assets/images/2023-graduates.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
 }
 
+/* Header */
 header {
-    display: flex;
-    padding: 1.5rem 2rem;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--dark-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: var(--dark-blue);
+  position: relative;
+  z-index: 3;
 }
 
 header img {
-    width: 60px;
+  width: 60px;
 }
 
+/* Navigation Links */
 .nav-links {
-    flex: 1;
-    text-align: right;
+  flex: 1;
+  text-align: right;
+  transition: right 0.5s ease;
+}
+
+.nav-links ul {
+  list-style: none;
 }
 
 .nav-links ul li {
-    list-style: none;
-    display: inline-block;
-    position: relative;
+  display: inline-block;
+  position: relative;
 }
 
 .nav-links ul li a {
-    color: var(--white);
-    text-decoration: none;
-    font-size: 13px;
-    text-transform: uppercase;
-    display: block;   
-    width: 100%;
-    height: 100%;
-    padding: 10px;
+  color: var(--white);
+  text-decoration: none;
+  font-size: 13px;
+  text-transform: uppercase;
+  display: block;
+  padding: 10px;
 }
 
 .nav-links ul li::after {
-    content: '';
-    width: 0;
-    height: 2px;
-    background: var(--light-blue);
-    display: block;
-    margin: auto;
-    transition: 0.5s;
+  content: "";
+  width: 0;
+  height: 2px;
+  background: var(--light-blue);
+  display: block;
+  margin: auto;
+  transition: 0.4s ease;
 }
 
 .nav-links ul li:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
+/* ============================= */
+/* HERO CONTENT */
+/* ============================= */
+
 .text-box {
-    width: 90%;
-    color: var(--white);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+  width: 90%;
+  color: var(--white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .text-box h1 {
-    font-size: clamp(2rem, 4vw, 4.5rem);
+  font-size: clamp(2rem, 4vw, 4.5rem);
 }
 
 .text-box p {
-    margin: 10px 0  40px;
-    font-size: 15px;
-    color: var(--white);
+  margin: 10px 0 40px;
+  font-size: 15px;
+  color: var(--white);
 }
 
 .hero-btn {
-    display: inline-block;
-    text-decoration: none;
-    color: var(--white);
-    border: 1px solid var(--white);
-    padding: 12px 32px;
-    font-size: 13px;
-    background: transparent;
-    position: relative;
-    cursor: pointer;
-    transition: 0.5s;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--white);
+  border: 1px solid var(--white);
+  padding: 12px 32px;
+  font-size: 13px;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.4s ease;
 }
 
 .hero-btn:hover {
-    border: 1px solid var(--light-blue);
+  border-color: var(--light-blue);
+  background: var(--light-blue);
+}
+
+/* ============================= */
+/* ICON STYLES (Font Awesome) */
+/* ============================= */
+
+header .fa-solid {
+  display: none;
+  color: var(--white);
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 4;
+}
+
+/* ============================= */
+/* RESPONSIVE MENU */
+/* ============================= */
+
+@media (max-width: 700px) {
+  .nav-links {
+    position: absolute;
     background: var(--light-blue);
-    transition: 1s;
-}
+    height: 100vh;
+    width: 60%;
+    top: 0;
+    right: -60%;
+    text-align: left;
+    padding-top: 3rem;
+    z-index: 3;
+  }
 
-header .fa {
-    display: none;
-}
+  .nav-links ul li {
+    display: block;
+    margin: 1.5rem 0;
+  }
 
-@media(max-width:700px){
-    html, body {
-        overflow-x: hidden;
-    }
-
-    .nav-links ul li{
-        display: block;
-    }
-
-    .nav-links ul li a {
+  .nav-links ul li a {
     padding-left: 2rem;
-    }
+  }
 
-    .nav-links {
-        position: absolute;
-        background: var(--light-blue);
-        height: 100vh;
-        width: 50%;
-        top: 0;
-        right: -50%;
-        text-align: left;
-        z-index: 2;
-        transition: 1s;
-    }
+  header .fa-solid {
+    display: inline-block;
+  }
 
-    header .fa {
-        display: inline-block;
-        color: var(--white);
-        margin: 1rem;
-        font-size: 22px;
-        cursor: pointer;
-    }
-
-    .nav-links ul {
-        margin-top: 2rem;
-    }
+  .fa-xmark {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
 }
-/*coming soon*/
 
-
+/* ============================= */
+/* COMING SOON / EXTRA SECTIONS */
+/* ============================= */
